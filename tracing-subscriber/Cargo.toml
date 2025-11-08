@@ -41,10 +41,10 @@ nu-ansi-term = ["dep:nu-ansi-term"]
 regex = []
 
 [dependencies]
-tracing-core = { version = "0.1.33", default-features = false }
+tracing-core = { path = "../tracing-core", version = "0.1.33", default-features = false }
 
 # only required by the filter feature
-tracing = { optional = true, version = "0.1.41", default-features = false }
+tracing = { optional = true, path = "../tracing", version = "0.1.41", default-features = false }
 matchers = { optional = true, version = "0.2.0" }
 # required to have matchers::BuildError implement std::error::Error
 regex-automata = { optional = true, version = "0.4", default-features = false, features = ["std"] }
@@ -52,14 +52,14 @@ smallvec = { optional = true, version = "1.9.0" }
 once_cell = { optional = true, version = "1.13.0" }
 
 # fmt
-tracing-log = { version = "0.2.0", optional = true, default-features = false, features = ["log-tracer", "std"] }
+tracing-log = { path = "../tracing-log", version = "0.2.0", optional = true, default-features = false, features = ["log-tracer", "std"] }
 nu-ansi-term = { version = "0.50.0", optional = true }
 time = { version = "0.3.2", features = ["formatting"], optional = true }
 
 # only required by the json feature
 serde_json = { version = "1.0.82", optional = true }
 serde = { version = "1.0.140", optional = true }
-tracing-serde = { version = "0.2.0", optional = true }
+tracing-serde = { path = "../tracing-serde", version = "0.2.0", optional = true }
 
 # opt-in deps
 parking_lot = { version = "0.12.1", optional = true }
